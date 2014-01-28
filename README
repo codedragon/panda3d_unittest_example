@@ -4,6 +4,6 @@ Testing. Starting the Panda3d game engine has a lot of overhead, so we don't act
 
 The rest of the test file is just various tests to give an idea about how to set up unittests in Panda3d. I have tried to include comments in both files that will help someone just beginning in Panda3d as well. If you have questions about collisions, I highly recommend astelix's tutorial, http://www.panda3d.org/forums/viewtopic.php?t=7918.
 
-The only thing you may have to do differently in your game, in order to do the unittests is to include the if __name__ == "__main__": conditional at the end. This means that if you start the game like you normally would, ppython silly.py, than it will run normally, but if you import it as a module, the game will not be instantiated and will not run.
+In order to unit test, the only thing you may have to do differently in your game code itself from what you might currently be doing, is to include the if __name__ == "__main__": conditional at the end. This means that if you start the game like you normally would, for example ppython silly.py from the command line, then it will run normally, but if you import it as a module, the game will not be instantiated and will not run, which is what we want for testing.
 
 Hope someone finds this useful!

@@ -51,6 +51,9 @@ class TestSillyWorld(unittest.TestCase):
         taskMgr.step()
         taskMgr.step()
         self.assertTrue(self.w.frowney.isStashed()) 
+        # another idea is using a CollisionHandler in your code; you could put the
+        # taskMgr.step() in a loop until you saw a collision that interested you, 
+        # and then check that the behavior you expected occured after the collision.
 
     @classmethod
     def tearDownClass(cls):
